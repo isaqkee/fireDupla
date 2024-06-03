@@ -8,7 +8,7 @@ export default function App() {
 
   const [nome] = useState('Adicione seus dados...');
 
-  // Função para adicionar dados do primeiro funcionário
+
   async function addBancoExterno1() {
     await setDoc(doc(bancoExterno, "funcionários", "dados1"), {
       Nome: "L.Barbosa",
@@ -17,7 +17,7 @@ export default function App() {
     });
   }
 
-  // Função para adicionar dados do segundo funcionário
+
   async function addBancoExterno2() {
     await setDoc(doc(bancoExterno, "funcionários", "dados2"), {
       Nome: "Diego",
@@ -26,7 +26,7 @@ export default function App() {
     });
   }
 
-  // Função para adicionar dados do terceiro funcionário
+
   async function addBancoExterno3() {
     await setDoc(doc(bancoExterno, "funcionários", "dados3"), {
       Nome: "Isaque",
@@ -36,8 +36,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    // Remova a chamada à função pegarDados se ela não estiver definida
-    // pegarDados();
+    
   }, []);
 
   return (

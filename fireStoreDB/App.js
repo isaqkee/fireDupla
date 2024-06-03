@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { bancoExterno } from './firebaseConnection';
 import { useEffect, useState } from 'react';
 import { doc, setDoc } from 'firebase/firestore';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 
 export default function App() {
 
@@ -41,7 +41,9 @@ export default function App() {
   }, []);
 
   return (
+    
     <View style={styles.container}>
+      <Image source={require('./assets/Checklist.gif')} style={styles.gif}></Image>
       <Text style={{ fontSize: 25 }}>Informação: {nome}</Text>
       <TouchableOpacity style={styles.button} onPress={addBancoExterno1}>
         <Text style={styles.buttonText}>Adicionar Dados 1</Text>
@@ -75,4 +77,9 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
   },
+  gif: {
+    width: 250,
+    height: 250,
+    marginBottom: 20,
+  }
 });
